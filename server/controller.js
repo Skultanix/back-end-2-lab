@@ -3,7 +3,7 @@ const houseDB = require(`./db.json`)
 let houseID = 4
 
 module.exports = {
-getAllHouses: (req, res) => res.status(200).send(houseDB),
+getHouses: (req, res) => res.status(200).send(houseDB),
 deleteHouse: (req, res) => {
     let index = houseDB.findIndex(ele => ele.id === +req.params.id)
     houseDB.splice(index, 1)
